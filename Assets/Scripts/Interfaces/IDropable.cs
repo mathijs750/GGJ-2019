@@ -1,18 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class IDropable : MonoBehaviour
+﻿namespace Interfaces
 {
-    // Start is called before the first frame update
-    void Start()
+    public interface IDropable
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void EnableDropping();
     }
 }
