@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{fd74b342-72fd-4fdc-800d-3ef0509eb734}">
+        <property name="assetPath">
+            <value>BB_Collision_Build_Plastic_v1_15.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.48622916666666666</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{70e25a8b-6aca-43d1-8ef1-f3fd4b1c35bd}</destination>
+        </relationship>
+    </object>
+</objects>
