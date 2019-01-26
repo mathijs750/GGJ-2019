@@ -12,6 +12,7 @@ namespace Controllers
     {
         [SerializeField] private GameEvent RespawnEvent;
         [SerializeField] private GameEvent LastEvent;
+        private bool controlsEnabled;
 
         public float MovementForce = 1000f;
 
