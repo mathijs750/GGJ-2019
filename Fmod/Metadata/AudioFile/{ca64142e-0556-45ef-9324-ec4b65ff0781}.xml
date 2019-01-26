@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{e913d4c4-a6a8-4845-aecd-e2681ac02ad8}">
+    <object class="AudioFile" id="{ca64142e-0556-45ef-9324-ec4b65ff0781}">
         <property name="assetPath">
-            <value>Music/BB_Music_v2_partZ3_tail.ogg</value>
-        </property>
-        <property name="isStreaming">
-            <value>true</value>
+            <value>Music/BB_Music_v3_partA_tail.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>
@@ -14,7 +11,7 @@
             <value>2</value>
         </property>
         <property name="length">
-            <value>12.048104166666667</value>
+            <value>9.3174375000000005</value>
         </property>
         <relationship name="masterAssetFolder">
             <destination>{70e25a8b-6aca-43d1-8ef1-f3fd4b1c35bd}</destination>

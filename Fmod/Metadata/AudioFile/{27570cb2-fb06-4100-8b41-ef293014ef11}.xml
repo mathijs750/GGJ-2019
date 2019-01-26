@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{c894cbca-f033-433a-9ee1-3041180fd452}">
+    <object class="AudioFile" id="{27570cb2-fb06-4100-8b41-ef293014ef11}">
         <property name="assetPath">
-            <value>Music/BB_Music_v2_partF_tail.ogg</value>
+            <value>Music/BB_Music_v3_partF_tail.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>
