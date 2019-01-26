@@ -20,10 +20,9 @@ namespace Managers
     {
         private GameState _state = GameState.StartUp;
         
-        [SerializeField, FormerlySerializedAs("prefabs")]
-        private GameObject[] BlockPrefabKinds;
+        [SerializeField]
+        private GameObject[] _housePlacePrefabs;
 
-        public Sprite[] PossibleShapes;
 
         public float DropRate = 20f;
         public float MovementSpeed = 1f;
@@ -31,18 +30,11 @@ namespace Managers
         public float Progress { get; private set; }
         public int Score { get; private set; }
 
-        private GameObject NextBlock => BlockPrefabKinds[BlockIndexList.Dequeue()];
-
         public GameState CurrentState => _state;
         private Queue<int> BlockIndexList { get; set; }
         public static float WaitTime => 5f;
 
-        public static GameManager Instance;
-
-        public void RespawnBird()
-        {
-          //  BirdRef.Respawn(NextBlock);
-        }
+        public static GameManager Instance;        
 
         public void ChangeState(GameState desiredState)
         {
@@ -61,8 +53,6 @@ namespace Managers
             {
                 //TODO: clear out the progress and other things
             }
-            
-            
         }
         
         private void Awake()
@@ -79,22 +69,6 @@ namespace Managers
             DontDestroyOnLoad(gameObject);
         }
 
-        private void Start()
-        {
-            Instance.SetUpQueue(10);
-            RespawnBird();
-        }
-
-        private void SetUpQueue(int size)
-        {
-            if (BlockIndexList == null) BlockIndexList = new Queue<int>(size+(size/2));
-            
-            for (int i = 0; i < size; i++)
-            {
-                BlockIndexList.Enqueue(Random.Range(0, BlockPrefabKinds.Length - 1));
-            }
-        }
-
         private IEnumerator ProgressClock(float timeLimit)
         {
             Instance.Progress += 0.5f;
@@ -102,14 +76,11 @@ namespace Managers
 //            if ()
 //            StartCoroutine()
         }
-//        
-//        private void GetNextBlock(int nextIndex)
-//        {
-//            var block = BlockPrefabKinds[nextIndex];
-//            block.GetComponent<SpriteRenderer>().sprite =
-//                PossibleShapes[Random.Range(0, PossibleShapes.Length - 1)];
-//            block.AddComponent<BoxCollider2D>();
-//        }
+
+        private IEnumerator TimedStateChange(GameState newState)
+        {
+            yield break;
+        }
     }
 
 }
