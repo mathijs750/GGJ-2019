@@ -37,13 +37,11 @@ namespace Managers
         private Queue<int> BlockIndexList { get; set; }
         public static float WaitTime => 5f;
 
-        [FormerlySerializedAs("birdRef")] public PlayerBirdController BirdRef;
-
         public static GameManager Instance;
 
         public void RespawnBird()
         {
-            BirdRef.Respawn(NextBlock);
+          //  BirdRef.Respawn(NextBlock);
         }
 
         public void ChangeState(GameState desiredState)
