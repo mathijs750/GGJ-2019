@@ -1,4 +1,5 @@
-﻿using Interfaces;
+﻿using Controllers;
+using Interfaces;
 using UnityEngine;
 
 namespace Drops
@@ -7,26 +8,32 @@ namespace Drops
     public class BasicBlock : MonoBehaviour, IDropable
     {
         private Rigidbody2D _rb;
+        public PlayerBirdController PlayerRef { get; set; }
+        private bool _isAttached;
 
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+            
             //_rb.isKinematic = true;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            //Debug.Log($"AUW ik raak {other.gameObject.name}");
+            Debug.Log($"AUW ik raak {other.gameObject.name}");
+            if (_isAttached) EnableDropping(); 
         }
 
         public void EnableDropping()
         {
+            _isAttached = false;
             //_rb.isKinematic = false;
         }
 
         public void AttachToBird()
         {
             if (_rb != null) _rb.isKinematic = false;
+            _isAttached = true;
         }
     }
 }
