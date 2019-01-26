@@ -1,49 +1,60 @@
 ﻿using System;
 using Interfaces;
 using Managers;
+using ScriptableObjects;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace Controllers
 {
     public class PlayerBirdController : MonoBehaviour
     {
-        public Transform AttachmentPoint;
-
-        private HingeJoint2D _joint;
+        [SerializeField] private GameEvent RespawnEvent;
+        private HingeJoint2D _hinge;
         private IDropable _payload;
-        private readonly Vector2 _spawnPoint = new Vector2(0, 20);
+        private Rigidbody2D _rb;
+        private readonly Vector2 _spawnPoint = new Vector2(0, 8);
+
+        private void Awake()
+        {
+            _rb = GetComponent<Rigidbody2D>();
+        }
 
         public void DropBlock()
         {
-            _joint.breakForce = 0;
-            _joint.breakTorque = 0;
+            
+            Destroy(GetComponent<HingeJoint2D>());
             _payload.EnableDropping();
-
-            
         }
 
-        public void Respawn()
+        public void Respawn(GameObject newDrop)
         {
-            var newDrop = GameManager.Instance.BlockList.Dequeue();
-            if (newDrop != null) return;
-            
+            Destroy(GetComponent<HingeJoint2D>());
             transform.position = _spawnPoint;
+            var newDropInstance = Instantiate(newDrop, transform.localPosition, Quaternion.identity);            
             _payload = newDrop.GetComponent<IDropable>();
-            _joint.connectedBody = newDrop.GetComponent<Rigidbody2D>();
-            _joint.breakForce = float.PositiveInfinity;
-            _joint.breakTorque = float.PositiveInfinity;
-        }
 
-        private void Start()
-        {
-            _joint = GetComponent<HingeJoint2D>();
-            
+            _hinge = gameObject.AddComponent<HingeJoint2D>();
+            _hinge.anchor = Vector2.zero;
+            _hinge.anchor = Vector2.zero;
+//            _hinge.motor = new JointMotor2D()
+//            {
+//                maxMotorTorque = 5f,
+//                motorSpeed = 0
+//            };
+            _hinge.connectedBody = newDropInstance.GetComponent<Rigidbody2D>();
+
+            _payload.AttachToBird();
         }
 
         private void Update()
         {
-            transform.position += Vector3.right * (Input.GetAxis("Horizontal") * GameManager.Instance.MovementSpeed);
-            transform.position += Vector3.down * GameManager.Instance.DropRate;
+            _rb.AddForce( Vector2.right * (Input.GetAxis("Horizontal") * GameManager.Instance.MovementSpeed) * 1000f);
+            //transform.position += Vector3.down * GameManager.Instance.DropRate;
+
+            if (Input.GetKeyDown(KeyCode.Space)) DropBlock();
+            
+            if (transform.position.y < -2f) RespawnEvent.Raise();
         }
     }
 }

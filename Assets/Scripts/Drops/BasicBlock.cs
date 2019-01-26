@@ -3,16 +3,14 @@ using UnityEngine;
 
 namespace Drops
 {
-    [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
     public class BasicBlock : MonoBehaviour, IDropable
     {
         private Rigidbody2D _rb;
-        private Collider2D _coll;
 
-        private void OnEnable()
+        private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
-            _coll = GetComponent<Collider2D>();
             //_rb.isKinematic = true;
         }
 
@@ -24,6 +22,11 @@ namespace Drops
         public void EnableDropping()
         {
             //_rb.isKinematic = false;
+        }
+
+        public void AttachToBird()
+        {
+            if (_rb != null) _rb.isKinematic = false;
         }
     }
 }
