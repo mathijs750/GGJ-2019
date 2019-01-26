@@ -30,6 +30,12 @@ namespace Controllers
             Debug.Log($"Drag is {_rb.drag} because Gm is {GameManager.Instance.DropRate}");
         }
 
+        public void EnableControls()
+        {
+            _rb.isKinematic = false;
+            RequestRespawn();
+        }
+        
         public void DropBlock()
         {
             Destroy(GetComponent<HingeJoint2D>());
@@ -61,14 +67,20 @@ namespace Controllers
 
         private void Update()
         {
+            if (Input.GetButtonDown("Jump") && GameManager.Instance.CurrentState != GameState.InfoScreen)
+            {
+                Debug.Log("E!");
+                EnableControls();
+            } 
             if (GameManager.Instance.CurrentState != GameState.GamePlay) return;
 
             _rb.AddForce(Vector2.right * (Input.GetAxis("Horizontal") * GameManager.Instance.MovementSpeed) *
                          MovementForce);
 
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetButtonDown("Fire2"))
                 _rb.AddForce(Vector2.up * MovementForce / 3f);
-            if (Input.GetKeyDown(KeyCode.Space))
+            
+            if (Input.GetButtonDown("Fire1"))
                 DropBlock();
 
             if (!(transform.position.y < -2f)) return;
@@ -80,5 +92,7 @@ namespace Controllers
         {
             RespawnEvent.Raise();
         }
+        
+        
     }
 }
