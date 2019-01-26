@@ -68,12 +68,13 @@ namespace Controllers
 
         private void Update()
         {
-            if (Input.GetButtonDown("Jump") && GameManager.Instance.CurrentState == GameState.InfoScreen)
-            {
-                GameManager.Instance.ChangeState(GameState.GamePlay);
-                Debug.Log("E!");
-                EnableControls();
-            } 
+//            Debug.Log($"{GameManager.Instance.CurrentState}");
+//            if (Input.GetButtonDown("Jump") && GameManager.Instance.CurrentState == GameState.InfoScreen)
+//            {
+//                GameManager.Instance.ChangeState(GameState.GamePlay);
+//                Debug.Log("E!");
+//                EnableControls();
+//            } 
             if (GameManager.Instance.CurrentState != GameState.GamePlay) return;
 
             _rb.AddForce(Vector2.right * (Input.GetAxis("Horizontal") * GameManager.Instance.MovementSpeed) *

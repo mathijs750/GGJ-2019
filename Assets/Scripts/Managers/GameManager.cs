@@ -95,14 +95,14 @@ namespace Managers
                     break;
                 case GameState.SplashScreen:
                     UiController.Instance.ShowSplash();
-                    yield return new WaitForSeconds(2);
-                    UiController.Instance.HideSplash();
-                    yield return new WaitForSeconds(2);
-                    UiController.Instance.ShowInfo();
-                    break;
-                case GameState.InfoScreen:
-                    UiController.Instance.HideInfo();
                     yield return new WaitForSeconds(3);
+                    UiController.Instance.HideSplash();
+                    yield return new WaitForSeconds(3);
+                    UiController.Instance.ShowInfo();
+                    yield return new WaitForSeconds(10);
+                    UiController.Instance.HideInfo();
+                    yield return new WaitForSeconds(2);
+                    Debug.Log("Start game");
                     StartCoroutine(TimedStateChange(GameState.GamePlay));
                     yield break;
 
