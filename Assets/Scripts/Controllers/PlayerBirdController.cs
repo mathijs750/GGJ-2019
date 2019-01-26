@@ -11,6 +11,7 @@ namespace Controllers
     public class PlayerBirdController : MonoBehaviour
     {
         [SerializeField] private GameEvent RespawnEvent;
+        [SerializeField] private GameEvent LastEvent;
 
         public float MovementForce = 1000f;
 
@@ -36,7 +37,7 @@ namespace Controllers
             Invoke($"RequestRespawn", GameManager.WaitTime);
         }
 
-        public void Respawn(GameObject newDrop)
+        public void Respawn(GameObject newDrop, bool isLast)
         {
             Destroy(GetComponent<HingeJoint2D>());
             transform.position = _spawnPoint;
@@ -54,6 +55,8 @@ namespace Controllers
             _hinge.connectedBody = newDropInstance.GetComponent<Rigidbody2D>();
 
             _payload.AttachToBird();
+            
+            if (isLast) _payload.MakeLast(LastEvent);
         }
 
         private void Update()

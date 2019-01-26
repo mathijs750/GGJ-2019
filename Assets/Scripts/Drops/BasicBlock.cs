@@ -1,5 +1,6 @@
 ﻿using Controllers;
 using Interfaces;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace Drops
@@ -10,6 +11,7 @@ namespace Drops
         private Rigidbody2D _rb;
         public PlayerBirdController PlayerRef { get; set; }
         private bool _isAttached;
+        private GameEvent _onDoneEvent;
 
         private void Awake()
         {
@@ -22,6 +24,7 @@ namespace Drops
         {
             Debug.Log($"AUW ik raak {other.gameObject.name}");
             if (_isAttached) EnableDropping(); 
+            else if (_onDoneEvent != null) _onDoneEvent.Raise();
         }
 
         public void EnableDropping()
@@ -34,6 +37,11 @@ namespace Drops
         {
             if (_rb != null) _rb.isKinematic = false;
             _isAttached = true;
+        }
+
+        public void MakeLast(GameEvent endEvent)
+        {
+            _onDoneEvent = endEvent;
         }
     }
 }
