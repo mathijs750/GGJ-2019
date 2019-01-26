@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EncodableAsset" id="{d3524ea9-5a54-4b68-9b62-f4e2de07deb7}">
+        <property name="assetPath">
+            <value>Collisions/Build/Plastic/</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{70e25a8b-6aca-43d1-8ef1-f3fd4b1c35bd}</destination>
+        </relationship>
+    </object>
+</objects>

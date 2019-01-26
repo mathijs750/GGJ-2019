@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{41b17371-c793-4b3f-84e1-73b38ad8cd81}">
+        <property name="name">
+            <value>FeathersAwarded</value>
+        </property>
+        <relationship name="folder">
+            <destination>{3eb9180f-ca3f-47a0-aa98-48418f3e8012}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{cfe4013b-d21f-4970-afe6-04b5a771ff32}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{cfe4013b-d21f-4970-afe6-04b5a771ff32}">
+        <property name="maximum">
+            <value>3</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

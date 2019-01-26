@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{51e48844-3c46-4ebb-b228-b88f45810e45}">
+        <property name="assetPath">
+            <value>Collisions/Build/Stone/BB_Collisions_Stone_Build_v1_08.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.54862500000000003</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{70e25a8b-6aca-43d1-8ef1-f3fd4b1c35bd}</destination>
+        </relationship>
+    </object>
+</objects>
