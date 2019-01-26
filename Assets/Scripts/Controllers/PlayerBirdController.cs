@@ -24,8 +24,9 @@ namespace Controllers
         {
             _rb = GetComponent<Rigidbody2D>();
             _rb.drag = GameManager.Instance.DropRate;
+            _rb.isKinematic = true;
 
-            Debug.Log($"Drag is {_rb.drag}");
+            Debug.Log($"Drag is {_rb.drag} because Gm is {GameManager.Instance.DropRate}");
         }
 
         public void DropBlock()
