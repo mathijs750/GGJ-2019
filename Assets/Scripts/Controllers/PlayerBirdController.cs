@@ -69,6 +69,7 @@ namespace Controllers
         {
             if (Input.GetButtonDown("Jump") && GameManager.Instance.CurrentState != GameState.InfoScreen)
             {
+                GameManager.Instance.ChangeState(GameState.GamePlay);
                 Debug.Log("E!");
                 EnableControls();
             } 
