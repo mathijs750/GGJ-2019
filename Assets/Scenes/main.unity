@@ -1259,6 +1259,52 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1002972291739622681}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1811338428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811338427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sound design/WingFlap
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1811338429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811338427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sound design/Mother/FlightStart
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1811338431 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1002972291813208388, guid: 48a85fcfbd89b4181b379a30303959a1,
@@ -1588,6 +1634,76 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208386, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208386, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 13.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208386, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1811338428}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1811338428}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002972291813208391, guid: 48a85fcfbd89b4181b379a30303959a1,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48a85fcfbd89b4181b379a30303959a1, type: 3}
