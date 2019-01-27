@@ -8,7 +8,7 @@ namespace Controllers
         [SerializeField] private Image BlackoutImage;
         [SerializeField] private Image SplashImage;
         [SerializeField] private Image InfoImage;
-        [SerializeField] private Image ScoreImage;
+        [SerializeField] private Image[] ScoreImages;
 
         public static UiController Instance;
 
@@ -34,12 +34,18 @@ namespace Controllers
 
         public void ShowScore()
         {
-            InfoImage.CrossFadeAlpha(0, 2f, false);
+            foreach (var img in ScoreImages)
+            {
+                img.CrossFadeAlpha(1, 2f, false);
+            }
         }
         
         public void HideScore()
         {
-            InfoImage.CrossFadeAlpha(0, 2f, false);
+            foreach (var img in ScoreImages)
+            {
+                img.CrossFadeAlpha(0, 2f, false);
+            }
         }
 
         public void FadeToBlack()
@@ -67,7 +73,10 @@ namespace Controllers
             
             SplashImage.canvasRenderer.SetAlpha(0);
             InfoImage.canvasRenderer.SetAlpha(0);
-            ScoreImage.canvasRenderer.SetAlpha(0);
+            foreach (var img in ScoreImages)
+            {
+                img.canvasRenderer.SetAlpha(0);
+            }
         }
     }
 }
