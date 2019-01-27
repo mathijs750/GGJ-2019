@@ -4,16 +4,13 @@
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
 [LOG] OutputCoreAudio::enumerate               : Enumerating...
 [LOG] OutputCoreAudio::enumerate               : Found output driver: "Built-in Output".
-[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (2ch)".
-[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (64ch)".
-[LOG] OutputCoreAudio::enumerate               : Found output driver: "Pro Tools Aggregate I/O".
-[LOG] OutputCoreAudio::enumerate               : Found output driver: "Multi-Output Device".
 [LOG] OutputCoreAudio::enumerate               : Done.
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 48000Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x10fb12c08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x1517f6408 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -23,16 +20,9 @@
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] SoundI::release                          : BB_Music_v3_Intro_tail (0x14f02ef78)
+[LOG] SoundI::release                          :     BB_Music_v3_Intro_tail (0x15976dc78)
+[LOG] SoundI::release                          :     BB_Music_v3_Intro_tail (0x15976de48)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
@@ -40,5 +30,985 @@
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_09', format=2, channels=1, frequency=48000, lengthbytes=6624, lengthpcm=37517, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.542786.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_05', format=2, channels=1, frequency=48000, lengthbytes=4704, lengthpcm=27318, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.632935.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_19', format=2, channels=1, frequency=48000, lengthbytes=6304, lengthpcm=34117, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.428223.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_06', format=2, channels=1, frequency=48000, lengthbytes=5184, lengthpcm=29135, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.542328.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_08', format=2, channels=1, frequency=48000, lengthbytes=5568, lengthpcm=30827, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.524323.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_01', format=2, channels=1, frequency=48000, lengthbytes=7040, lengthpcm=38952, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988495.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_21', format=2, channels=1, frequency=48000, lengthbytes=5408, lengthpcm=30175, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.738281.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_04', format=2, channels=1, frequency=48000, lengthbytes=7680, lengthpcm=44060, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.368835.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_23', format=2, channels=1, frequency=48000, lengthbytes=5696, lengthpcm=30799, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.420074.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_30', format=2, channels=1, frequency=48000, lengthbytes=3424, lengthpcm=16575, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.701996.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_26', format=2, channels=1, frequency=48000, lengthbytes=2912, lengthpcm=15750, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.704742.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_06', format=2, channels=1, frequency=48000, lengthbytes=4928, lengthpcm=28504, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.348572.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_16', format=2, channels=1, frequency=48000, lengthbytes=5824, lengthpcm=31969, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.442932.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_07', format=2, channels=1, frequency=48000, lengthbytes=4992, lengthpcm=28885, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.469727.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_02', format=2, channels=1, frequency=48000, lengthbytes=5152, lengthpcm=28700, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.442139.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_20', format=2, channels=1, frequency=48000, lengthbytes=4384, lengthpcm=25169, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.325287.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_15', format=2, channels=1, frequency=48000, lengthbytes=4416, lengthpcm=23339, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.528046.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_03', format=2, channels=1, frequency=48000, lengthbytes=6592, lengthpcm=35702, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.799408.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_01', format=2, channels=1, frequency=48000, lengthbytes=2816, lengthpcm=14600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.454437.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_05', format=2, channels=1, frequency=48000, lengthbytes=5376, lengthpcm=30193, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.475433.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_08', format=2, channels=1, frequency=48000, lengthbytes=4160, lengthpcm=23439, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.441833.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_10', format=2, channels=1, frequency=48000, lengthbytes=4192, lengthpcm=23246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.519470.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_28', format=2, channels=1, frequency=48000, lengthbytes=2912, lengthpcm=15650, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.843750.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_16', format=2, channels=1, frequency=48000, lengthbytes=4512, lengthpcm=24674, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.517059.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_10', format=2, channels=1, frequency=48000, lengthbytes=6592, lengthpcm=37293, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.614044.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_12', format=2, channels=1, frequency=48000, lengthbytes=6240, lengthpcm=31512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.421509.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_29', format=2, channels=1, frequency=48000, lengthbytes=2976, lengthpcm=15200, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.797363.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_13', format=2, channels=1, frequency=48000, lengthbytes=7360, lengthpcm=41214, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.401947.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_18', format=2, channels=1, frequency=48000, lengthbytes=4800, lengthpcm=24073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.439056.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_11', format=2, channels=1, frequency=48000, lengthbytes=6176, lengthpcm=34229, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.608002.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_12', format=2, channels=1, frequency=48000, lengthbytes=6560, lengthpcm=36028, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.621002.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_17', format=2, channels=1, frequency=48000, lengthbytes=2336, lengthpcm=12285, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.515472.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_13', format=2, channels=1, frequency=48000, lengthbytes=6016, lengthpcm=31643, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.422516.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_19', format=2, channels=1, frequency=48000, lengthbytes=4096, lengthpcm=23346, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.357056.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_07', format=2, channels=1, frequency=48000, lengthbytes=4224, lengthpcm=22002, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.434692.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_15', format=2, channels=1, frequency=48000, lengthbytes=6016, lengthpcm=32617, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.508392.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_18', format=2, channels=1, frequency=48000, lengthbytes=6624, lengthpcm=37098, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.624115.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_24', format=2, channels=1, frequency=48000, lengthbytes=3680, lengthpcm=21125, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.964478.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_04', format=2, channels=1, frequency=48000, lengthbytes=4864, lengthpcm=27365, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.488831.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_17', format=2, channels=1, frequency=48000, lengthbytes=5824, lengthpcm=30248, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.425385.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_14', format=2, channels=1, frequency=48000, lengthbytes=5664, lengthpcm=30712, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.461823.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_25', format=2, channels=1, frequency=48000, lengthbytes=7072, lengthpcm=38533, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.632721.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_02', format=2, channels=1, frequency=48000, lengthbytes=5824, lengthpcm=32230, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988495.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_11', format=2, channels=1, frequency=48000, lengthbytes=5120, lengthpcm=28685, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.490662.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_03', format=2, channels=1, frequency=48000, lengthbytes=5760, lengthpcm=33988, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.503601.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_27', format=2, channels=1, frequency=48000, lengthbytes=2496, lengthpcm=12364, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988525.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_14', format=2, channels=1, frequency=48000, lengthbytes=7936, lengthpcm=42508, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.475372.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Plastic_v1_22', format=2, channels=1, frequency=48000, lengthbytes=5920, lengthpcm=33464, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.547363.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2228320
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 120544
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000d1437dc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x151cd9885
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x151cd9941
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x151cd9971
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x151cd9a0e
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x150cb3a68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BB_Collision_Build_Wood_v1_09', format=2, channels=1, frequency=48000, lengthbytes=5216, lengthpcm=30017, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.473267.
+[LOG] SoundI::release                          :  (0x120e3bb68)
+[LOG] SoundI::release                          :     BB_Music_Baby3_Z1 (0x120e6c618)
+[LOG] SoundI::release                          :  (0x14f75a7a8)
+[LOG] SoundI::release                          :     BB_Music_Baby2_Z1 (0x14f7f4d38)
+[LOG] SoundI::release                          :  (0x14f02c858)
+[LOG] SoundI::release                          :     BB_Music_Baby4_Z1 (0x14f067098)
+[LOG] SoundI::release                          :  (0x159768988)
+[LOG] SoundI::release                          :     BB_Music_Baby1_Z1 (0x159768af8)
+[LOG] SoundI::release                          :  (0x14f0e97c8)
+[LOG] SoundI::release                          :     BB_Music_Baby1_Z0 (0x14f0df5e8)
+[LOG] SoundI::release                          :  (0x15976a568)
+[LOG] SoundI::release                          :     BB_Music_Baby3_Z0 (0x15976a6d8)
+[LOG] SoundI::release                          :  (0x15976bb78)
+[LOG] SoundI::release                          :     BB_Music_Baby4_Z0 (0x15976bce8)
+[LOG] SoundI::release                          :  (0x159769f78)
+[LOG] SoundI::release                          :     BB_Music_Baby2_Z0 (0x15976a0e8)
+[LOG] SoundI::release                          :  (0x14f7a8948)
+[LOG] SoundI::release                          :     BB_Music_Baby4_Z2 (0x14f7a8ab8)
+[LOG] SoundI::release                          :  (0x14f7b68e8)
+[LOG] SoundI::release                          :     BB_Music_Baby3_Z2 (0x14f7b6a58)
+[LOG] SoundI::release                          :  (0x120e5c258)
+[LOG] SoundI::release                          :     BB_Music_Baby1_Z2 (0x120e5c3c8)
+[LOG] SoundI::release                          :  (0x14f06eb18)
+[LOG] SoundI::release                          :     BB_Music_Baby2_Z2 (0x14f06a968)
+[LOG] SoundI::release                          :  (0x14f7a8f38)
+[LOG] SoundI::release                          :     BB_Music_Baby2_Z3 (0x14f7a90a8)
+[LOG] SoundI::release                          :  (0x14f032968)
+[LOG] SoundI::release                          :     BB_Music_Baby3_Z3 (0x14f039ee8)
+[LOG] SoundI::release                          :  (0x14f059de8)
+[LOG] SoundI::release                          :     BB_Music_Baby4_Z3 (0x14f041fb8)
+[LOG] SoundI::release                          :  (0x14f78dc98)
+[LOG] SoundI::release                          :     BB_Music_Baby1_Z3 (0x14f78de08)
+[LOG] SoundI::release                          :  (0x124c17f18)
+[LOG] SoundI::release                          :     BB_Music_Baby2_D (0x14f0998e8)
+[LOG] SoundI::release                          :  (0x14f0cd708)
+[LOG] SoundI::release                          :     BB_Music_Baby3_E (0x14f0df0a8)
+[LOG] SoundI::release                          :  (0x15976ab58)
+[LOG] SoundI::release                          :     BB_Music_v3_partD_tail (0x15976acc8)
+[LOG] SoundI::release                          :  (0x14f7d3f08)
+[LOG] SoundI::release                          :     BB_Music_v3_outroZ1_tail (0x151839de8)
+[LOG] SoundI::release                          :  (0x14f0058a8)
+[LOG] SoundI::release                          :     BB_Music_Baby4_D (0x14f034278)
+[LOG] SoundI::release                          :  (0x14f7f5078)
+[LOG] SoundI::release                          :     BB_Music_Baby2_F (0x15184fcc8)
+[LOG] SoundI::release                          :  (0x150b1aa78)
+[LOG] SoundI::release                          :     BB_Music_Baby6_D (0x14f072698)
+[LOG] SoundI::release                          :  (0x14f03df08)
+[LOG] SoundI::release                          :     BB_Music_Baby1_D (0x14f0394e8)
+[LOG] SoundI::release                          :  (0x14f7b2e08)
+[LOG] SoundI::release                          :     BB_Music_Baby6_E (0x14f7b2f78)
+[LOG] SoundI::release                          :  (0x14f06d088)
+[LOG] SoundI::release                          :     BB_Music_v3_partE_tail (0x14f00db58)
+[LOG] SoundI::release                          :  (0x14f037fe8)
+[LOG] SoundI::release                          :     BB_Music_v3_partF_tail (0x14f09b5f8)
+[LOG] SoundI::release                          :  (0x151830f98)
+[LOG] SoundI::release                          :     BB_Music_Baby5_F (0x151831108)
+[LOG] SoundI::release                          :  (0x12686b028)
+[LOG] SoundI::release                          :     BB_Music_Baby3_D (0x14f0d1dc8)
+[LOG] SoundI::release                          :  (0x14f7b3878)
+[LOG] SoundI::release                          :     BB_Music_v3_outroZ0_tail (0x14f7b39e8)
+[LOG] SoundI::release                          :  (0x1597690f8)
+[LOG] SoundI::release                          :     BB_Music_Baby5_E (0x159769268)
+[LOG] SoundI::release                          :  (0x14fe67e48)
+[LOG] SoundI::release                          :     BB_Music_Baby5_D (0x14f02f698)
+[LOG] SoundI::release                          :  (0x14f7a9ea8)
+[LOG] SoundI::release                          :     BB_Music_Baby2_E (0x14f7aa018)
+[LOG] SoundI::release                          :  (0x15976b508)
+[LOG] SoundI::release                          :     BB_Music_Baby1_F (0x15976b678)
+[LOG] SoundI::release                          :  (0x1518f86b8)
+[LOG] SoundI::release                          :     BB_Music_Baby1_E (0x14f7b33f8)
+[LOG] SoundI::release                          :  (0x14f7813e8)
+[LOG] SoundI::release                          :     BB_Music_v3_IntroPost_tail (0x14f782f58)
+[LOG] SoundI::release                          :  (0x159768dc8)
+[LOG] SoundI::release                          :     BB_Music_Baby3_F (0x159766cf8)
+[LOG] SoundI::release                          :  (0x159769848)
+[LOG] SoundI::release                          :     BB_Music_v3_outroZ2_tail (0x1597699b8)
+[LOG] SoundI::release                          :  (0x14f0e4c98)
+[LOG] SoundI::release                          :     BB_Music_Baby4_F (0x14f026068)
+[LOG] SoundI::release                          :  (0x14f036748)
+[LOG] SoundI::release                          :     BB_Music_Baby4_E (0x14f0320d8)
+[LOG] SoundI::release                          :  (0x151890bb8)
+[LOG] SoundI::release                          :     BB_Music_Baby4_A (0x1518b9838)
+[LOG] SoundI::release                          :  (0x14f05a9a8)
+[LOG] SoundI::release                          :     BB_Music_Baby3_A (0x14f01f238)
+[LOG] SoundI::release                          :  (0x14f79af98)
+[LOG] SoundI::release                          :     BB_Music_v3_partA_tail (0x14f79b108)
+[LOG] SoundI::release                          :  (0x15976c1e8)
+[LOG] SoundI::release                          :     BB_Music_Baby2_A (0x15976c358)
+[LOG] SoundI::release                          :  (0x159764228)
+[LOG] SoundI::release                          :     BB_Music_Baby1_A (0x14ef52838)
+[LOG] SoundI::release                          :  (0x150cbfcc8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_01 (0x150cbfe38)
+[LOG] SoundI::release                          :  (0x150cb6828)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_02 (0x150cb6998)
+[LOG] SoundI::release                          :  (0x150cc9538)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_03 (0x150cc96a8)
+[LOG] SoundI::release                          :  (0x150cc6e98)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_04 (0x150cc7008)
+[LOG] SoundI::release                          :  (0x150cc02b8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_05 (0x150cc0428)
+[LOG] SoundI::release                          :  (0x150cbb2b8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_06 (0x150cb9638)
+[LOG] SoundI::release                          :  (0x150cc5668)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_07 (0x150cc57d8)
+[LOG] SoundI::release                          :  (0x150cc08a8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_08 (0x150cc0a18)
+[LOG] SoundI::release                          :  (0x150ccaf78)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_09 (0x150ccb0e8)
+[LOG] SoundI::release                          :  (0x150cba258)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_10 (0x150cba3c8)
+[LOG] SoundI::release                          :  (0x150cc8ec8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_11 (0x150cc9038)
+[LOG] SoundI::release                          :  (0x150cc1fb8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_12 (0x150cc2128)
+[LOG] SoundI::release                          :  (0x150cc4a88)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_13 (0x150cc4bf8)
+[LOG] SoundI::release                          :  (0x150cc7b78)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_14 (0x150cc7ce8)
+[LOG] SoundI::release                          :  (0x150cc5c58)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_15 (0x150cc5dc8)
+[LOG] SoundI::release                          :  (0x150cb5c48)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_16 (0x150cb5db8)
+[LOG] SoundI::release                          :  (0x150cc7508)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_17 (0x150cc7678)
+[LOG] SoundI::release                          :  (0x150cc3188)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_18 (0x150cc32f8)
+[LOG] SoundI::release                          :  (0x150cb1748)
+[LOG] SoundI::release                          :     BB_Collision_Build_Wood_v1_19 (0x150cb7638)
+[LOG] SoundI::release                          :  (0x150cbae98)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_01 (0x150cb7ce8)
+[LOG] SoundI::release                          :  (0x150cc8858)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_02 (0x150cc89c8)
+[LOG] SoundI::release                          :  (0x150cbf6d8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_03 (0x150cbf848)
+[LOG] SoundI::release                          :  (0x150cbcdb8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_04 (0x150cbcf28)
+[LOG] SoundI::release                          :  (0x150cbe938)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_05 (0x150cbd838)
+[LOG] SoundI::release                          :  (0x150cb5658)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_06 (0x150cb57c8)
+[LOG] SoundI::release                          :  (0x150cb6238)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_07 (0x150cb63a8)
+[LOG] SoundI::release                          :  (0x150cbaac8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_08 (0x151858f88)
+[LOG] SoundI::release                          :  (0x150cbdde8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_09 (0x150cb42c8)
+[LOG] SoundI::release                          :  (0x150cc19c8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_10 (0x150cc1b38)
+[LOG] SoundI::release                          :  (0x150cc3778)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_11 (0x150cc38e8)
+[LOG] SoundI::release                          :  (0x150cc3d68)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_12 (0x150cc3ed8)
+[LOG] SoundI::release                          :  (0x150cc2b98)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_13 (0x150cc2d08)
+[LOG] SoundI::release                          :  (0x150cca218)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_14 (0x150cca388)
+[LOG] SoundI::release                          :  (0x150cbf0e8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_15 (0x150cbf258)
+[LOG] SoundI::release                          :  (0x150cc13d8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_16 (0x150cc1548)
+[LOG] SoundI::release                          :  (0x150cc4498)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_17 (0x150cc4608)
+[LOG] SoundI::release                          :  (0x150cc6248)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_18 (0x150cc63b8)
+[LOG] SoundI::release                          :  (0x150cc5078)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_19 (0x150cc51e8)
+[LOG] SoundI::release                          :  (0x150cb6c68)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_20 (0x150cbec68)
+[LOG] SoundI::release                          :  (0x150cb6f08)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_21 (0x15188bab8)
+[LOG] SoundI::release                          :  (0x150cca988)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_22 (0x150ccaaf8)
+[LOG] SoundI::release                          :  (0x150cbd268)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_23 (0x150cbe238)
+[LOG] SoundI::release                          :  (0x150cc68a8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_24 (0x150cc6a18)
+[LOG] SoundI::release                          :  (0x150cc81e8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_25 (0x150cc8358)
+[LOG] SoundI::release                          :  (0x150cb5068)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_26 (0x150cb51d8)
+[LOG] SoundI::release                          :  (0x150cc9ba8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_27 (0x150cc9d18)
+[LOG] SoundI::release                          :  (0x150cc0de8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_28 (0x150cc0f58)
+[LOG] SoundI::release                          :  (0x150cc25a8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_29 (0x150cc2718)
+[LOG] SoundI::release                          :  (0x150cb4bb8)
+[LOG] SoundI::release                          :     BB_Collision_Build_Plastic_v1_30 (0x150cb4d28)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
