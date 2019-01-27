@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{84dcfe53-86e4-4eea-8e77-10711f55eb6f}">
         <property name="assetPath">
-            <value>Music/BB_Music_v3_partD_tail.wav</value>
+            <value>Music/Cues/BB_Music_v3_partD_tail.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>
