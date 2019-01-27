@@ -14,44 +14,37 @@ namespace Managers
         ScoreReview
     }
 
-
     public class GameManager : MonoBehaviour
     {
-        private GameState _state = GameState.StartUp;
-        private HouseController _houseCon;
+        public float DropRate = 20f;
+        public float MovementSpeed = 1f;
+        public static GameManager Instance;
 
         [SerializeField] private GameObject[] _housePlacePrefabs;
         private int _houseIndex;
-
         private bool _canChangeState;
 
-        public float DropRate = 20f;
-        public float MovementSpeed = 1f;
+        [FormerlySerializedAs("StartGameLoopEvent")] [SerializeField]
+        private GameEvent _startGameLoopEvent;
 
         public float Progress { get; private set; }
-        public int Score { get; private set; }
-
-        public GameState CurrentState => _state;
-        public HouseController CurrentHouseController => _houseCon;
-        
+        public GameState CurrentState { get; private set; } = GameState.StartUp;
+        public HouseController CurrentHouseController { get; private set; }
         public static float WaitTime => 5f;
-
-        [FormerlySerializedAs("StartGameLoopEvent")] [SerializeField] private GameEvent _startGameLoopEvent;
-
-        public static GameManager Instance;
+        public int Score => 0;
 
         public void SpawnNewHouseController()
         {
             _houseIndex++;
             var house = Instantiate(_housePlacePrefabs[_houseIndex], transform.localPosition, Quaternion.identity);
-            _houseCon = house.GetComponent<HouseController>();
+            CurrentHouseController = house.GetComponent<HouseController>();
             _startGameLoopEvent.Raise();
         }
 
         public void ChangeState(GameState desiredState)
         {
             if (!_canChangeState) return;
-            var prevState = Instance._state;
+            var prevState = Instance.CurrentState;
             Debug.Log($"Changing state from {prevState} => {desiredState}");
 
             StartCoroutine(TimedStateChange(desiredState));
@@ -77,7 +70,7 @@ namespace Managers
             ChangeState(GameState.SplashScreen);
             StartCoroutine($"ProgressClock");
             _houseIndex = -1;
-            _houseCon = null;
+            CurrentHouseController = null;
         }
 
         private IEnumerator ProgressClock()
@@ -90,7 +83,11 @@ namespace Managers
         private IEnumerator TimedStateChange(GameState newState)
         {
             _canChangeState = false;
-            var prevState = _state;
+            var prevState = CurrentState;
+
+            // DEBUG
+            newState = GameState.GamePlay;
+            // DEBUG
 
             switch (newState)
             {
@@ -125,7 +122,7 @@ namespace Managers
                     yield break;
             }
 
-            _state = newState; 
+            CurrentState = newState;
             _canChangeState = true;
         }
     }

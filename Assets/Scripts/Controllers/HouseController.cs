@@ -12,12 +12,6 @@ namespace Controllers
         [SerializeField] private GameObject[] _blocksForQueue;
         private int _currentIndex;
 
-        private void Awake()
-        {
-            _currentIndex = -1;
-            Debug.Log("Hello!");
-        }
-
         public (GameObject, bool) GetNextBlock()
         {
             _currentIndex++;
@@ -26,6 +20,11 @@ namespace Controllers
             return _currentIndex == _blocksForQueue.Length - 1
                 ? (_blocksForQueue[_currentIndex], true)
                 : (_blocksForQueue[_currentIndex], false);
+        }
+        
+        private void Awake()
+        {
+            _currentIndex = -1;
         }
         
     }

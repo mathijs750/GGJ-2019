@@ -12,7 +12,7 @@ namespace Controllers
     {
         [SerializeField] private GameEvent RespawnEvent;
         [SerializeField] private GameEvent LastEvent;
-        private bool controlsEnabled;
+        private bool _controlsEnabled;
 
         public float MovementForce = 1000f;
 
@@ -28,7 +28,7 @@ namespace Controllers
             _rb.drag = GameManager.Instance.DropRate;
             _rb.isKinematic = true;
 
-            Debug.Log($"Drag is {_rb.drag} because Gm is {GameManager.Instance.DropRate}");
+            //Debug.Log($"Drag is {_rb.drag} because Gm is {GameManager.Instance.DropRate}");
         }
 
         public void EnableControls()
