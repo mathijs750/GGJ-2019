@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{c22326ee-33f2-43e4-8afa-5e4444ba6944}">
         <property name="assetPath">
-            <value>Music/BB_Music_v3_Intro_tail.wav</value>
+            <value>Music/Cues/BB_Music_v3_Intro_tail.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

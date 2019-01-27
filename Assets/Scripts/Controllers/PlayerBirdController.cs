@@ -1,10 +1,7 @@
-﻿using System;
-using Interfaces;
+﻿using Interfaces;
 using Managers;
 using ScriptableObjects;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Controllers
 {
@@ -12,14 +9,15 @@ namespace Controllers
     {
         [SerializeField] private GameEvent RespawnEvent;
         [SerializeField] private GameEvent LastEvent;
-        private bool controlsEnabled;
+        private bool _controlsEnabled;
 
-        public float MovementForce = 1000f;
+        public float MovementForce = 800f;
 
         private HingeJoint2D _hinge;
         private IDropable _payload;
         private Rigidbody2D _rb;
-        private readonly Vector2 _spawnPoint = new Vector2(0, 8);
+        private bool _upIsPressed;
+        private readonly Vector2 _spawnPoint = new Vector2(-1, 13);
 
 
         private void Awake()
@@ -27,29 +25,36 @@ namespace Controllers
             _rb = GetComponent<Rigidbody2D>();
             _rb.drag = GameManager.Instance.DropRate;
             _rb.isKinematic = true;
-
-            Debug.Log($"Drag is {_rb.drag} because Gm is {GameManager.Instance.DropRate}");
         }
 
         public void EnableControls()
         {
             _rb.isKinematic = false;
+            _upIsPressed = false;
             RequestRespawn();
+        }
+        
+        public void DisableControls()
+        {
+            _rb.isKinematic = true;
         }
         
         public void DropBlock()
         {
             Destroy(GetComponent<HingeJoint2D>());
+            _rb.drag = GameManager.Instance.DropRate / 3;
             _payload.EnableDropping();
             Invoke($"RequestRespawn", GameManager.WaitTime);
         }
 
         public void Respawn(GameObject newDrop, bool isLast)
         {
+            if (newDrop == null) return;
             Destroy(GetComponent<HingeJoint2D>());
             transform.position = _spawnPoint;
             var newDropInstance = Instantiate(newDrop, transform.localPosition, Quaternion.identity);
             _payload = newDrop.GetComponent<IDropable>();
+            _rb.drag = GameManager.Instance.DropRate;
 
             _hinge = gameObject.AddComponent<HingeJoint2D>();
             _hinge.anchor = Vector2.zero;
@@ -80,20 +85,30 @@ namespace Controllers
             _rb.AddForce(Vector2.right * (Input.GetAxis("Horizontal") * GameManager.Instance.MovementSpeed) *
                          MovementForce);
 
-            if (Input.GetButtonDown("Fire2"))
-                _rb.AddForce(Vector2.up * MovementForce / 3f);
-            
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetAxisRaw("Vertical") > 0.6f && !_upIsPressed)
+            {
+                _rb.AddForce(Vector2.up * MovementForce / 2f);
+                _upIsPressed = true;
+            }
+            else if (Input.GetAxisRaw("Vertical") < 0.3f && _upIsPressed)
+            {
+                _upIsPressed = false;
+            }
+               
+            if (Input.GetButtonDown("Jump"))
                 DropBlock();
 
             if (!(transform.position.y < -2f)) return;
             CancelInvoke($"RequestRespawn");
-            RespawnEvent.Raise();
+            RequestRespawn();
         }
 
         private void RequestRespawn()
         {
             RespawnEvent.Raise();
+            var nextHouse = GameManager.Instance.CurrentHouseController.GetNextBlock();
+            var isLastHouse = GameManager.Instance.CurrentHouseController.IslastInQueue;
+            Respawn(nextHouse, isLastHouse);
         }
         
         

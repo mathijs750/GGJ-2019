@@ -9,28 +9,14 @@ namespace Drops
     public class BasicBlock : MonoBehaviour, IDropable
     {
         private Rigidbody2D _rb;
-        public PlayerBirdController PlayerRef { get; set; }
         private bool _isAttached;
         private GameEvent _onDoneEvent;
-
-        private void Awake()
-        {
-            _rb = GetComponent<Rigidbody2D>();
-            
-            //_rb.isKinematic = true;
-        }
-
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            Debug.Log($"AUW ik raak {other.gameObject.name}");
-            if (_isAttached) EnableDropping(); 
-            else if (_onDoneEvent != null) _onDoneEvent.Raise();
-        }
+        
+        public PlayerBirdController PlayerRef { get; set; }
 
         public void EnableDropping()
         {
             _isAttached = false;
-            //_rb.isKinematic = false;
         }
 
         public void AttachToBird()
@@ -42,6 +28,17 @@ namespace Drops
         public void MakeLast(GameEvent endEvent)
         {
             _onDoneEvent = endEvent;
+        }
+        
+        private void Awake()
+        {
+            _rb = GetComponent<Rigidbody2D>();
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (_isAttached) EnableDropping(); 
+            else if (_onDoneEvent != null) _onDoneEvent.Raise();
         }
     }
 }

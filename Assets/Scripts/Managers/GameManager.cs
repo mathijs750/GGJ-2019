@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using Controllers;
+using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Managers
 {
@@ -8,51 +10,55 @@ namespace Managers
     {
         StartUp,
         SplashScreen,
-        InfoScreen,
         GamePlay,
         ScoreReview
     }
 
-
     public class GameManager : MonoBehaviour
     {
-        private GameState _state = GameState.StartUp;
-
-        [SerializeField] private GameObject[] _housePlacePrefabs;
-
-        private bool canChangeState;
-
         public float DropRate = 20f;
         public float MovementSpeed = 1f;
+        public static GameManager Instance;
+
+        [SerializeField] private GameObject[] _housePlacePrefabs;
+        private int _houseIndex;
+        private bool _canChangeState;
+
+        [SerializeField]
+        private GameEvent _startGameLoopEvent;
+        [SerializeField]
+        private GameEvent _endGameLoopEvent;
 
         public float Progress { get; private set; }
-        public int Score { get; private set; }
-
-        public GameState CurrentState => _state;
+        public GameState CurrentState { get; private set; } = GameState.StartUp;
+        public HouseController CurrentHouseController { get; private set; }
         public static float WaitTime => 5f;
+        public int Score
+        {
+            get { return 0; }
+            set { throw new System.NotImplementedException(); }
+        }
 
-        public static GameManager Instance;
+        public void SpawnNewHouseController()
+        {            
+            _houseIndex++;
+            if (_houseIndex >= _housePlacePrefabs.Length)
+            {
+                ChangeState(GameState.ScoreReview);
+                return;
+            }
+            Destroy(CurrentHouseController);
+            var house = Instantiate(_housePlacePrefabs[_houseIndex], transform.localPosition, Quaternion.identity);
+            CurrentHouseController = house.GetComponent<HouseController>();
+            _startGameLoopEvent.Raise();
+        }
 
         public void ChangeState(GameState desiredState)
         {
-            if (!canChangeState) return;
-
-            var prevState = Instance._state;
-            Debug.Log($"Changing state from {prevState} => {desiredState}");
+            if (!_canChangeState) return;
+            Debug.Log($"Changing state from {Instance.CurrentState} => {desiredState}");
 
             StartCoroutine(TimedStateChange(desiredState));
-            return;
-
-            if (desiredState == GameState.SplashScreen)
-            {
-                UiController.Instance.ShowSplash();
-            }
-
-            if (prevState == GameState.ScoreReview &&
-                desiredState == GameState.SplashScreen)
-            {
-                //TODO: clear out the progress and other things
-            }
         }
 
         private void Awake()
@@ -71,22 +77,33 @@ namespace Managers
 
         private void Start()
         {
-            canChangeState = true;
+            _canChangeState = true;
             ChangeState(GameState.SplashScreen);
+            StartCoroutine($"ProgressClock");
+            _houseIndex = -1;
+            CurrentHouseController = null;
         }
 
-        private IEnumerator ProgressClock(float timeLimit)
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Escape)) Application.Quit(1);
+        }
+
+        private IEnumerator ProgressClock()
         {
             Instance.Progress += 0.5f;
             yield return new WaitForSeconds(0.5f);
-//            if ()
-//            StartCoroutine()
+            StartCoroutine($"ProgressClock");
         }
 
         private IEnumerator TimedStateChange(GameState newState)
         {
-            canChangeState = false;
-            var prevState = _state;
+            _canChangeState = false;
+            var prevState = CurrentState;
+
+            #if UNITY_EDITOR
+           // newState = GameState.GamePlay;
+            #endif
 
             switch (newState)
             {
@@ -102,27 +119,28 @@ namespace Managers
                     yield return new WaitForSeconds(10);
                     UiController.Instance.HideInfo();
                     yield return new WaitForSeconds(2);
-                    Debug.Log("Start game");
                     StartCoroutine(TimedStateChange(GameState.GamePlay));
                     yield break;
 
                 case GameState.GamePlay:
                     UiController.Instance.FadeToGame();
                     yield return new WaitForSeconds(3);
-
+                    SpawnNewHouseController();
                     break;
                 case GameState.ScoreReview:
+                    _endGameLoopEvent.Raise();
                     UiController.Instance.FadeToBlack();
                     yield return new WaitForSeconds(3);
                     UiController.Instance.ShowScore();
                     yield return new WaitForSeconds(3);
-
+                    
                     break;
                 default:
                     yield break;
             }
 
-            canChangeState = true;
+            CurrentState = newState;
+            _canChangeState = true;
         }
     }
 }
