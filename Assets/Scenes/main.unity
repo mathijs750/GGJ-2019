@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 94825565}
   - component: {fileID: 94825564}
   - component: {fileID: 94825563}
+  - component: {fileID: 94825566}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -265,6 +266,35 @@ MonoBehaviour:
   RespawnEvent: {fileID: 11400000, guid: 3a1dd5d83120944319207c8e8663cd56, type: 2}
   LastEvent: {fileID: 11400000, guid: ca27888cc761d4a0892c632cf1df9c0b, type: 2}
   MovementForce: 1000
+--- !u!114 &94825566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94825562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a2ae94246a4d0dbe0b4a48999ff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 94825565}
+        m_MethodName: EnableControls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &94825567
 Transform:
   m_ObjectHideFlags: 0
@@ -1292,9 +1322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5214511d0f05b46d49d6d1f7dff81547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _housePlacePrefabs: []
+  _housePlacePrefabs:
+  - {fileID: 112485618925447302, guid: f9257c173c7a643a1a85cb30eb0dd5a3, type: 3}
   DropRate: 15
   MovementSpeed: 0.1
+  StartGameLoopEvent: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5, type: 2}
 --- !u!4 &1994350741
 Transform:
   m_ObjectHideFlags: 0
@@ -1303,7 +1335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994350739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

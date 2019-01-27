@@ -15,9 +15,10 @@ namespace Controllers
         private void Awake()
         {
             _currentIndex = -1;
+            Debug.Log("Hello!");
         }
 
-        private (GameObject, bool) GetNextBlock()
+        public (GameObject, bool) GetNextBlock()
         {
             _currentIndex++;
             return _currentIndex == _blocksForQueue.Length - 1

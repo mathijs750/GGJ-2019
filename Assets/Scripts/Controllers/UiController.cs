@@ -32,25 +32,25 @@ namespace Controllers
 
         public void ShowSplash()
         {
-            Debug.Log("Show splash screen");
+            //Debug.Log("Show splash screen");
             SplashImage.CrossFadeAlpha(1, 2f, false);
         }
         
         public void HideSplash()
         {
-            Debug.Log("Hide splash screen");
+            //Debug.Log("Hide splash screen");
             SplashImage.CrossFadeAlpha(0, 2f, false);
         }
 
         public void ShowInfo()
         {
-            Debug.Log("Show info screen");
+            //Debug.Log("Show info screen");
             InfoImage.CrossFadeAlpha(1, 2f, false);
         }
         
         public void HideInfo()
         {
-            Debug.Log("Hide info screen");
+            //Debug.Log("Hide info screen");
             InfoImage.CrossFadeAlpha(0, 2f, false);
         }
 

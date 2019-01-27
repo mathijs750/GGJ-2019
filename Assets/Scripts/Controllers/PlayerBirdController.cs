@@ -33,6 +33,7 @@ namespace Controllers
 
         public void EnableControls()
         {
+            Debug.Log($"Controls gaan aan");
             _rb.isKinematic = false;
             RequestRespawn();
         }
@@ -88,12 +89,14 @@ namespace Controllers
 
             if (!(transform.position.y < -2f)) return;
             CancelInvoke($"RequestRespawn");
-            RespawnEvent.Raise();
+            RequestRespawn();
         }
 
         private void RequestRespawn()
         {
             RespawnEvent.Raise();
+            (GameObject, bool) nextHouse = GameManager.Instance.CurrentHouseController.GetNextBlock();
+            Respawn(nextHouse.Item1, nextHouse.Item2);
         }
         
         
