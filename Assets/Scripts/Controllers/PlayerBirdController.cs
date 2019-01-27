@@ -9,6 +9,10 @@ namespace Controllers
     {
         [SerializeField] private GameEvent RespawnEvent;
         [SerializeField] private GameEvent LastEvent;
+        
+        [SerializeField] private GameEvent HopEvent;
+        [SerializeField] private GameEvent DropEvent;
+        
         private bool _controlsEnabled;
 
         public float MovementForce = 800f;
@@ -45,6 +49,7 @@ namespace Controllers
             _rb.drag = GameManager.Instance.DropRate / 3;
             _payload?.EnableDropping();
             _payload = null;
+            DropEvent.Raise();
             Invoke($"RequestRespawn", GameManager.WaitTime);
         }
 
@@ -91,6 +96,7 @@ namespace Controllers
                 if (_payload != null) _rb.AddForce(Vector2.up * MovementForce * 3f);
                 _rb.AddForce(Vector2.up * MovementForce);
                 _upIsPressed = true;
+                HopEvent.Raise();
             }
 
             if (Input.GetButtonDown("Drop"))
