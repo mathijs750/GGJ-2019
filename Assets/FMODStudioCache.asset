@@ -13,17 +13,24 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114119144375803378}
-  - {fileID: 114267684145463872}
-  - {fileID: 114898755968336008}
-  - {fileID: 114669282747361952}
+  - {fileID: 114764987227589360}
+  - {fileID: 114255114896089576}
+  - {fileID: 114235154170109188}
+  - {fileID: 114775711258982940}
   EditorEvents:
-  - {fileID: 114047297221686652}
+  - {fileID: 114156042248906134}
+  - {fileID: 114764322946705522}
+  - {fileID: 114819110508068844}
+  - {fileID: 114789353876828810}
+  - {fileID: 114719926710428328}
   MasterBanks:
   - {fileID: 114898755968336008}
+  - {fileID: 114232632611508066}
+  - {fileID: 114235154170109188}
   StringsBanks:
   - {fileID: 114119144375803378}
-  stringsBankWriteTime: 636841416720000000
+  - {fileID: 114764987227589360}
+  stringsBankWriteTime: 636841818210000000
   cacheVersion: 3
 --- !u!114 &114007159375064152
 MonoBehaviour:
@@ -79,12 +86,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Fmod/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636841416720000000
+  lastModified: 636841546800000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1034
-  Exists: 1
+    Value: 1040
+  Exists: 0
+--- !u!114 &114156042248906134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Sound design/Collisions/Build/Plastic
+  guid: 1bdbf396afcd164d91aab535079f6eb7
+  Banks:
+  - {fileID: 114775711258982940}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 687
 --- !u!114 &114188194252303498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +170,65 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114232632611508066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/Larsburgwal/GIT repositories/GIT BirdBox/Fmod/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636841546800000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 0
+--- !u!114 &114235154170109188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/Larsburgwal/GIT repositories/GIT BirdBox/Assets/Audio/Desktop/Master
+    Bank.bank
+  lastModified: 636841818210000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 1
+--- !u!114 &114255114896089576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/Larsburgwal/GIT repositories/GIT BirdBox/Assets/Audio/Desktop/Music.bank
+  lastModified: 636841818260000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 5329312
+  Exists: 1
 --- !u!114 &114257124679263692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +264,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1594368
   Exists: 1
+--- !u!114 &114329627917993230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/Larsburgwal/GIT repositories/GIT BirdBox/Fmod/Build/Desktop/Sound Design.bank
+  lastModified: 636841521400000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 547552
+  Exists: 0
 --- !u!114 &114345225772831518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +322,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 687
+--- !u!114 &114369738826073900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FeathersAwarded
+  Min: 0
+  Max: 3
+  Default: 0
 --- !u!114 &114488661234266138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +393,25 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
+--- !u!114 &114541874310399904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/Larsburgwal/GIT repositories/GIT BirdBox/Fmod/Build/Desktop/Music.bank
+  lastModified: 636841546800000000
+  LoadResult: 13
+  FileSizes:
+  - Name: Desktop
+    Value: 7904
+  Exists: 0
 --- !u!114 &114570216405881194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +447,32 @@ MonoBehaviour:
   - Name: Desktop
     Value: 532480
   Exists: 1
+--- !u!114 &114719926710428328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music
+  guid: 2f21791e81d9e9499b82b4e4b58ade8f
+  Banks:
+  - {fileID: 114255114896089576}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114369738826073900}
+  - {fileID: 114934154075393982}
+  - {fileID: 114858325861782438}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 151000
 --- !u!114 &114724517276809264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +489,131 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114764322946705522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Sound design/Collisions/Crash/Crash
+  guid: 62b18bd3de003e4b8f379df2943a0513
+  Banks:
+  - {fileID: 114775711258982940}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
+--- !u!114 &114764987227589360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Desktop/Master Bank.strings.bank
+  lastModified: 636841818210000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1040
+  Exists: 1
+--- !u!114 &114775711258982940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/Larsburgwal/GIT repositories/GIT BirdBox/Assets/Audio/Desktop/Sound
+    Design.bank
+  lastModified: 636841818270000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 547552
+  Exists: 1
+--- !u!114 &114789353876828810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Sound design/Collisions/Build/Stone
+  guid: fe409c3146c82b459a5569203a537b00
+  Banks:
+  - {fileID: 114775711258982940}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 624
 --- !u!114 &114815709173118144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GameOver
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114819110508068844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Sound design/Collisions/Build/Wood
+  guid: d5aa4af408d9084f88e061df4c1ee558
+  Banks:
+  - {fileID: 114775711258982940}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 260
+--- !u!114 &114858325861782438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,7 +663,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 12474
-  Exists: 1
+  Exists: 0
 --- !u!114 &114911537505899902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +679,22 @@ MonoBehaviour:
   Name: FeathersAwarded
   Min: 0
   Max: 3
+  Default: 0
+--- !u!114 &114934154075393982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Progression
+  Min: 0
+  Max: 100
   Default: 0
 --- !u!114 &114937876731311750
 MonoBehaviour:
