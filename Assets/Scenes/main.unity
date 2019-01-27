@@ -306,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -10}
+  m_LocalPosition: {x: -1.0840814, y: 6.863884, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.425
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -478,7 +478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848622740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -10}
+  m_LocalPosition: {x: -1.01, y: 12.2630005, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 618805428}
@@ -1126,10 +1126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5214511d0f05b46d49d6d1f7dff81547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _housePlacePrefabs:
-  - {fileID: 112485618925447302, guid: f9257c173c7a643a1a85cb30eb0dd5a3, type: 3}
   DropRate: 30
   MovementSpeed: 0.1
+  _housePlacePrefabs:
+  - {fileID: 112485618925447302, guid: f9257c173c7a643a1a85cb30eb0dd5a3, type: 3}
   _startGameLoopEvent: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5,
     type: 2}
 --- !u!4 &1994350741
@@ -1184,12 +1184,12 @@ PrefabInstance:
     - target: {fileID: 1002972291813208390, guid: 48a85fcfbd89b4181b379a30303959a1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 1002972291813208390, guid: 48a85fcfbd89b4181b379a30303959a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 13.79
       objectReference: {fileID: 0}
     - target: {fileID: 1002972291813208390, guid: 48a85fcfbd89b4181b379a30303959a1,
         type: 3}

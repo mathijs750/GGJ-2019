@@ -29,10 +29,14 @@ namespace Controllers
 
         public void EnableControls()
         {
-            Debug.Log($"Controls gaan aan");
             _rb.isKinematic = false;
             _upIsPressed = false;
             RequestRespawn();
+        }
+        
+        public void DisableControls()
+        {
+            _rb.isKinematic = true;
         }
         
         public void DropBlock()
@@ -45,6 +49,7 @@ namespace Controllers
 
         public void Respawn(GameObject newDrop, bool isLast)
         {
+            if (newDrop == null) return;
             Destroy(GetComponent<HingeJoint2D>());
             transform.position = _spawnPoint;
             var newDropInstance = Instantiate(newDrop, transform.localPosition, Quaternion.identity);

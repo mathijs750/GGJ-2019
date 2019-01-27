@@ -24,8 +24,10 @@ namespace Managers
         private int _houseIndex;
         private bool _canChangeState;
 
-        [FormerlySerializedAs("StartGameLoopEvent")] [SerializeField]
+        [SerializeField]
         private GameEvent _startGameLoopEvent;
+        [SerializeField]
+        private GameEvent _endGameLoopEvent;
 
         public float Progress { get; private set; }
         public GameState CurrentState { get; private set; } = GameState.StartUp;
@@ -36,12 +38,12 @@ namespace Managers
         public void SpawnNewHouseController()
         {            
             _houseIndex++;
-            if (_houseIndex >= _housePlacePrefabs.Length - 1)
+            if (_houseIndex >= _housePlacePrefabs.Length)
             {
                 ChangeState(GameState.ScoreReview);
                 return;
             }
-            
+            Destroy(CurrentHouseController);
             var house = Instantiate(_housePlacePrefabs[_houseIndex], transform.localPosition, Quaternion.identity);
             CurrentHouseController = house.GetComponent<HouseController>();
             _startGameLoopEvent.Raise();
@@ -96,7 +98,7 @@ namespace Managers
             var prevState = CurrentState;
 
             #if UNITY_EDITOR
-            newState = GameState.GamePlay;
+           // newState = GameState.GamePlay;
             #endif
 
             switch (newState)
@@ -122,11 +124,12 @@ namespace Managers
                     SpawnNewHouseController();
                     break;
                 case GameState.ScoreReview:
+                    _endGameLoopEvent.Raise();
                     UiController.Instance.FadeToBlack();
                     yield return new WaitForSeconds(3);
                     UiController.Instance.ShowScore();
                     yield return new WaitForSeconds(3);
-
+                    
                     break;
                 default:
                     yield break;
