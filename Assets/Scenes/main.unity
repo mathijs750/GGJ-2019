@@ -1324,9 +1324,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _housePlacePrefabs:
   - {fileID: 112485618925447302, guid: f9257c173c7a643a1a85cb30eb0dd5a3, type: 3}
-  DropRate: 15
+  DropRate: 30
   MovementSpeed: 0.1
-  StartGameLoopEvent: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5, type: 2}
+  _startGameLoopEvent: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5,
+    type: 2}
 --- !u!4 &1994350741
 Transform:
   m_ObjectHideFlags: 0

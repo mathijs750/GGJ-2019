@@ -21,6 +21,8 @@ namespace Controllers
         public (GameObject, bool) GetNextBlock()
         {
             _currentIndex++;
+            if (_currentIndex >= _blocksForQueue.Length) Debug.Log("AH!");
+            
             return _currentIndex == _blocksForQueue.Length - 1
                 ? (_blocksForQueue[_currentIndex], true)
                 : (_blocksForQueue[_currentIndex], false);

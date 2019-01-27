@@ -71,12 +71,6 @@ namespace Managers
             DontDestroyOnLoad(gameObject);
         }
 
-        private void Update()
-        {
-            if (Input.GetKey(KeyCode.T)) Time.timeScale = 10;
-            Time.timeScale = 1;
-        }
-
         private void Start()
         {
             _canChangeState = true;
