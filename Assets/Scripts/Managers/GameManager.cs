@@ -102,7 +102,7 @@ namespace Managers
             var prevState = CurrentState;
 
             #if UNITY_EDITOR
-           // newState = GameState.GamePlay;
+            //newState = GameState.GamePlay;
             #endif
 
             switch (newState)
@@ -112,11 +112,11 @@ namespace Managers
                     break;
                 case GameState.SplashScreen:
                     UiController.Instance.ShowSplash();
-                    yield return new WaitForSeconds(3);
+                    yield return new WaitForSeconds(2);
                     UiController.Instance.HideSplash();
-                    yield return new WaitForSeconds(3);
+                    yield return new WaitForSeconds(2);
                     UiController.Instance.ShowInfo();
-                    yield return new WaitForSeconds(10);
+                    yield return new WaitForSeconds(7);
                     UiController.Instance.HideInfo();
                     yield return new WaitForSeconds(2);
                     StartCoroutine(TimedStateChange(GameState.GamePlay));
@@ -132,9 +132,9 @@ namespace Managers
                     UiController.Instance.FadeToBlack();
                     yield return new WaitForSeconds(3);
                     UiController.Instance.ShowScore();
-                    yield return new WaitForSeconds(3);
+                    yield return new WaitForSeconds(10);
                     
-                    break;
+                    yield break;
                 default:
                     yield break;
             }
