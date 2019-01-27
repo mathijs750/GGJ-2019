@@ -90,9 +90,9 @@ namespace Managers
             _canChangeState = false;
             var prevState = CurrentState;
 
-            // DEBUG
+            #if UNITY_EDITOR
             newState = GameState.GamePlay;
-            // DEBUG
+            #endif
 
             switch (newState)
             {
