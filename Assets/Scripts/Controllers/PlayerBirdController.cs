@@ -1,10 +1,7 @@
-﻿using System;
-using Interfaces;
+﻿using Interfaces;
 using Managers;
 using ScriptableObjects;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Controllers
 {
@@ -27,8 +24,6 @@ namespace Controllers
             _rb = GetComponent<Rigidbody2D>();
             _rb.drag = GameManager.Instance.DropRate;
             _rb.isKinematic = true;
-
-            //Debug.Log($"Drag is {_rb.drag} because Gm is {GameManager.Instance.DropRate}");
         }
 
         public void EnableControls()
@@ -95,8 +90,9 @@ namespace Controllers
         private void RequestRespawn()
         {
             RespawnEvent.Raise();
-            (GameObject, bool) nextHouse = GameManager.Instance.CurrentHouseController.GetNextBlock();
-            Respawn(nextHouse.Item1, nextHouse.Item2);
+            var nextHouse = GameManager.Instance.CurrentHouseController.GetNextBlock();
+            var isLastHouse = GameManager.Instance.CurrentHouseController.IslastInQueue;
+            Respawn(nextHouse, isLastHouse);
         }
         
         
