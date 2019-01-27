@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{9f441445-49d2-496f-b0a8-3dc53d4853a3}">
         <property name="assetPath">
-            <value>BB_Collisions_Stone_Build_v1_08.wav</value>
+            <value>Collisions/Build/Stone/BB_Collisions_Stone_Build_v1_08.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

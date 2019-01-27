@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{aa26acc6-0f45-442b-8296-42f2c0c81f6e}">
+        <property name="assetPath">
+            <value>Music/Babies/BB_Music_Baby4_F.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.6614374999999999</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{70e25a8b-6aca-43d1-8ef1-f3fd4b1c35bd}</destination>
+        </relationship>
+    </object>
+</objects>
