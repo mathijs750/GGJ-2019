@@ -33,17 +33,18 @@ namespace Controllers
             _upIsPressed = false;
             RequestRespawn();
         }
-        
+
         public void DisableControls()
         {
             _rb.isKinematic = true;
         }
-        
+
         public void DropBlock()
         {
             Destroy(GetComponent<HingeJoint2D>());
             _rb.drag = GameManager.Instance.DropRate / 3;
-            _payload.EnableDropping();
+            _payload?.EnableDropping();
+            _payload = null;
             Invoke($"RequestRespawn", GameManager.WaitTime);
         }
 
@@ -67,7 +68,7 @@ namespace Controllers
             _hinge.connectedBody = newDropInstance.GetComponent<Rigidbody2D>();
 
             _payload.AttachToBird();
-            
+
             if (isLast) _payload.MakeLast(LastEvent);
         }
 
@@ -85,17 +86,14 @@ namespace Controllers
             _rb.AddForce(Vector2.right * (Input.GetAxis("Horizontal") * GameManager.Instance.MovementSpeed) *
                          MovementForce);
 
-            if (Input.GetAxisRaw("Vertical") > 0.6f && !_upIsPressed)
+            if (Input.GetButtonDown("Jump"))
             {
-                _rb.AddForce(Vector2.up * MovementForce / 2f);
+                if (_payload != null) _rb.AddForce(Vector2.up * MovementForce * 3f);
+                _rb.AddForce(Vector2.up * MovementForce);
                 _upIsPressed = true;
             }
-            else if (Input.GetAxisRaw("Vertical") < 0.3f && _upIsPressed)
-            {
-                _upIsPressed = false;
-            }
-               
-            if (Input.GetButtonDown("Jump"))
+
+            if (Input.GetButtonDown("Drop"))
                 DropBlock();
 
             if (!(transform.position.y < -2f)) return;
@@ -110,7 +108,5 @@ namespace Controllers
             var isLastHouse = GameManager.Instance.CurrentHouseController.IslastInQueue;
             Respawn(nextHouse, isLastHouse);
         }
-        
-        
     }
 }
