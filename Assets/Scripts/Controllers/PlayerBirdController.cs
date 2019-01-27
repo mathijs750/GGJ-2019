@@ -11,11 +11,12 @@ namespace Controllers
         [SerializeField] private GameEvent LastEvent;
         private bool _controlsEnabled;
 
-        public float MovementForce = 1000f;
+        public float MovementForce = 800f;
 
         private HingeJoint2D _hinge;
         private IDropable _payload;
         private Rigidbody2D _rb;
+        private bool _upIsPressed;
         private readonly Vector2 _spawnPoint = new Vector2(-1, 13);
 
 
@@ -30,12 +31,14 @@ namespace Controllers
         {
             Debug.Log($"Controls gaan aan");
             _rb.isKinematic = false;
+            _upIsPressed = false;
             RequestRespawn();
         }
         
         public void DropBlock()
         {
             Destroy(GetComponent<HingeJoint2D>());
+            _rb.drag = GameManager.Instance.DropRate / 3;
             _payload.EnableDropping();
             Invoke($"RequestRespawn", GameManager.WaitTime);
         }
@@ -46,6 +49,7 @@ namespace Controllers
             transform.position = _spawnPoint;
             var newDropInstance = Instantiate(newDrop, transform.localPosition, Quaternion.identity);
             _payload = newDrop.GetComponent<IDropable>();
+            _rb.drag = GameManager.Instance.DropRate;
 
             _hinge = gameObject.AddComponent<HingeJoint2D>();
             _hinge.anchor = Vector2.zero;
@@ -76,10 +80,17 @@ namespace Controllers
             _rb.AddForce(Vector2.right * (Input.GetAxis("Horizontal") * GameManager.Instance.MovementSpeed) *
                          MovementForce);
 
-            if (Input.GetButtonDown("Fire2"))
-                _rb.AddForce(Vector2.up * MovementForce / 3f);
-            
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetAxisRaw("Vertical") > 0.6f && !_upIsPressed)
+            {
+                _rb.AddForce(Vector2.up * MovementForce / 2f);
+                _upIsPressed = true;
+            }
+            else if (Input.GetAxisRaw("Vertical") < 0.3f && _upIsPressed)
+            {
+                _upIsPressed = false;
+            }
+               
+            if (Input.GetButtonDown("Jump"))
                 DropBlock();
 
             if (!(transform.position.y < -2f)) return;
