@@ -73,6 +73,11 @@ namespace Managers
             CurrentHouseController = null;
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Escape)) Application.Quit(1);
+        }
+
         private IEnumerator ProgressClock()
         {
             Instance.Progress += 0.5f;
