@@ -111,20 +111,23 @@ namespace Managers
                     UiController.Instance.FadeToBlack();
                     break;
                 case GameState.SplashScreen:
+                    UiController.Instance.ShowBrand();
+                    yield return new WaitForSeconds(2);
+                    UiController.Instance.HideBrand();
+                    yield return new WaitForSeconds(1);
                     UiController.Instance.ShowSplash();
-                    yield return new WaitForSeconds(2);
+                    yield return new WaitForSeconds(3);
                     UiController.Instance.HideSplash();
-                    yield return new WaitForSeconds(2);
+                    yield return new WaitForSeconds(1);
                     UiController.Instance.ShowInfo();
                     yield return new WaitForSeconds(7);
                     UiController.Instance.HideInfo();
-                    yield return new WaitForSeconds(2);
+                    yield return new WaitForSeconds(1);
                     StartCoroutine(TimedStateChange(GameState.GamePlay));
                     yield break;
 
                 case GameState.GamePlay:
                     UiController.Instance.FadeToGame();
-                    yield return new WaitForSeconds(3);
                     SpawnNewHouseController();
                     break;
                 case GameState.ScoreReview:

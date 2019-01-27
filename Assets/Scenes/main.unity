@@ -622,7 +622,7 @@ MonoBehaviour:
   - {fileID: 2133202007}
   - {fileID: 1640386885}
   - {fileID: 1563318441}
-  HkuBranding: {fileID: 0}
+  HkuBranding: {fileID: 2031469013}
 --- !u!1 &1074776578
 GameObject:
   m_ObjectHideFlags: 0
