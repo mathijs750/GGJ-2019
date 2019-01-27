@@ -1,5 +1,341 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &306564484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306564485}
+  - component: {fileID: 306564487}
+  - component: {fileID: 306564486}
+  m_Layer: 0
+  m_Name: DropLog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &306564485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306564484}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1002972291813208390}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306564487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306564484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a2ae94246a4d0dbe0b4a48999ff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f95b31f2f1f864d37b2448ec552ffc7d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 306564486}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &306564486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306564484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sound design/Mother/DropLog
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &327667369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327667370}
+  - component: {fileID: 327667372}
+  - component: {fileID: 327667371}
+  m_Layer: 0
+  m_Name: FlapUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &327667370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327667369}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1002972291813208390}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327667372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327667369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a2ae94246a4d0dbe0b4a48999ff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4bd0625099b2c48b5a6bbf1214d12344, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 327667371}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &327667371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327667369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sound design/Mother/FlapVoice
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &953402972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 953402973}
+  - component: {fileID: 953402975}
+  - component: {fileID: 953402974}
+  m_Layer: 0
+  m_Name: FlightStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &953402973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953402972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1002972291813208390}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &953402975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953402972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a2ae94246a4d0dbe0b4a48999ff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 953402974}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &953402974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953402972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sound design/Mother/FlightStart
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &1472687804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472687805}
+  - component: {fileID: 1472687807}
+  - component: {fileID: 1472687806}
+  m_Layer: 0
+  m_Name: Wingflap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1472687805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472687804}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1002972291813208390}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472687807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472687804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a2ae94246a4d0dbe0b4a48999ff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1472687806}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1472687806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472687804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Sound design/WingFlap
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1002972291813208387
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +368,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7886909681605493634}
+  - {fileID: 953402973}
+  - {fileID: 1472687805}
+  - {fileID: 306564485}
+  - {fileID: 327667370}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,6 +389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespawnEvent: {fileID: 11400000, guid: 3a1dd5d83120944319207c8e8663cd56, type: 2}
   LastEvent: {fileID: 11400000, guid: ca27888cc761d4a0892c632cf1df9c0b, type: 2}
+  HopEvent: {fileID: 11400000, guid: 4bd0625099b2c48b5a6bbf1214d12344, type: 2}
+  DropEvent: {fileID: 11400000, guid: f95b31f2f1f864d37b2448ec552ffc7d, type: 2}
   MovementForce: 1000
 --- !u!50 &1002972291813208389
 Rigidbody2D:
@@ -86,12 +428,12 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 5}
+  m_ConnectedAnchor: {x: -1.01, y: 13.79}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 365
@@ -293,75 +635,9 @@ PrefabInstance:
       objectReference: {fileID: 7886909681357684527}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc9b36703830814b82c1f23ad986115, type: 3}
---- !u!4 &7886909681605493634 stripped
+--- !u!4 &7886909681784896158 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 878352977674820004, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909682430495288 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352978967416862, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909683176085630 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352978238833240, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909682774118109 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352978641065211, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909681357684527 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352977896695049, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909682313893848 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352979121475070, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909681973501604 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352977302586498, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909681262995375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352978004458889, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909682978149996 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352978444667978, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909681372024036 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352977912223426, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909681831602329 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352977431163583, guid: 6fc9b36703830814b82c1f23ad986115,
-    type: 3}
-  m_PrefabInstance: {fileID: 7008559728797784614}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909681672898972 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 878352977606890426, guid: 6fc9b36703830814b82c1f23ad986115,
+  m_CorrespondingSourceObject: {fileID: 878352977452671160, guid: 6fc9b36703830814b82c1f23ad986115,
     type: 3}
   m_PrefabInstance: {fileID: 7008559728797784614}
   m_PrefabAsset: {fileID: 0}
@@ -371,15 +647,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7008559728797784614}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909683105140036 stripped
+--- !u!4 &7886909681672898972 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 878352978301130594, guid: 6fc9b36703830814b82c1f23ad986115,
+  m_CorrespondingSourceObject: {fileID: 878352977606890426, guid: 6fc9b36703830814b82c1f23ad986115,
     type: 3}
   m_PrefabInstance: {fileID: 7008559728797784614}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7886909681784896158 stripped
+--- !u!4 &7886909681831602329 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 878352977452671160, guid: 6fc9b36703830814b82c1f23ad986115,
+  m_CorrespondingSourceObject: {fileID: 878352977431163583, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909681372024036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352977912223426, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909682978149996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352978444667978, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909681262995375 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352978004458889, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909681973501604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352977302586498, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909682313893848 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352979121475070, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909681357684527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352977896695049, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909682774118109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352978641065211, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909683176085630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352978238833240, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909682430495288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352978967416862, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909681605493634 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352977674820004, guid: 6fc9b36703830814b82c1f23ad986115,
+    type: 3}
+  m_PrefabInstance: {fileID: 7008559728797784614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7886909683105140036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 878352978301130594, guid: 6fc9b36703830814b82c1f23ad986115,
     type: 3}
   m_PrefabInstance: {fileID: 7008559728797784614}
   m_PrefabAsset: {fileID: 0}
