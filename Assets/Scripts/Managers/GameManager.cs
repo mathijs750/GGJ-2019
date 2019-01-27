@@ -34,8 +34,14 @@ namespace Managers
         public int Score => 0;
 
         public void SpawnNewHouseController()
-        {
+        {            
             _houseIndex++;
+            if (_houseIndex >= _housePlacePrefabs.Length - 1)
+            {
+                ChangeState(GameState.ScoreReview);
+                return;
+            }
+            
             var house = Instantiate(_housePlacePrefabs[_houseIndex], transform.localPosition, Quaternion.identity);
             CurrentHouseController = house.GetComponent<HouseController>();
             _startGameLoopEvent.Raise();
@@ -44,8 +50,7 @@ namespace Managers
         public void ChangeState(GameState desiredState)
         {
             if (!_canChangeState) return;
-            var prevState = Instance.CurrentState;
-            Debug.Log($"Changing state from {prevState} => {desiredState}");
+            Debug.Log($"Changing state from {Instance.CurrentState} => {desiredState}");
 
             StartCoroutine(TimedStateChange(desiredState));
         }
