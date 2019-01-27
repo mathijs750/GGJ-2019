@@ -42,17 +42,27 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.28
       objectReference: {fileID: 0}
+    - target: {fileID: 4915157319317199464, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.6384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915157319317199464, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: b09b608d7630346c0a8e95c8341bdd03, type: 2}
+    - target: {fileID: 4915157319317199464, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4915157319317199466, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1450f992ff845194f8d88a430156bb4b,
         type: 3}
-    - target: {fileID: 4915157319317199464, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1.6384
-      objectReference: {fileID: 0}
     - target: {fileID: 4915157319317199469, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -106,6 +116,11 @@ PrefabInstance:
     - target: {fileID: 4915157319317199469, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715748385253392322, guid: ea63c7a3e51af42dbbde8996f6bc5b31,
+        type: 3}
+      propertyPath: OverrideAttenuation
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
