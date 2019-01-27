@@ -16,7 +16,7 @@ namespace Controllers
         private HingeJoint2D _hinge;
         private IDropable _payload;
         private Rigidbody2D _rb;
-        private readonly Vector2 _spawnPoint = new Vector2(0, 8);
+        private readonly Vector2 _spawnPoint = new Vector2(-1, 13);
 
 
         private void Awake()
