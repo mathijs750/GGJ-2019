@@ -9,8 +9,19 @@ namespace Controllers
         [SerializeField] private Image SplashImage;
         [SerializeField] private Image InfoImage;
         [SerializeField] private Image[] ScoreImages;
+        [SerializeField] private Image HkuBranding;
 
         public static UiController Instance;
+        
+        public void ShowBrand()
+        {
+            HkuBranding.CrossFadeAlpha(1, 2f, false);
+        }
+        
+        public void HideBrand()
+        {
+            HkuBranding.CrossFadeAlpha(0, 2f, false);
+        }
 
         public void ShowSplash()
         {
@@ -73,6 +84,7 @@ namespace Controllers
             
             SplashImage.canvasRenderer.SetAlpha(0);
             InfoImage.canvasRenderer.SetAlpha(0);
+            HkuBranding.canvasRenderer.SetAlpha(0);
             foreach (var img in ScoreImages)
             {
                 img.canvasRenderer.SetAlpha(0);
