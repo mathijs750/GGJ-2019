@@ -1096,6 +1096,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.324005}
+--- !u!1 &1811338427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1002972291813208387, guid: 48a85fcfbd89b4181b379a30303959a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1002972291739622681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1811338431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1002972291813208388, guid: 48a85fcfbd89b4181b379a30303959a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1002972291739622681}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811338427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1781a60c28e1e4817b439b11c887116e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1811338432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811338427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a2ae94246a4d0dbe0b4a48999ff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 909619709e1df4902985077a2c4a8466, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1811338431}
+        m_MethodName: DisableControls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1994350739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1179,7 @@ MonoBehaviour:
   - {fileID: 112485618925447302, guid: f9257c173c7a643a1a85cb30eb0dd5a3, type: 3}
   _startGameLoopEvent: {fileID: 11400000, guid: d68b9d28528254b1bb8d0eda8504fcf5,
     type: 2}
+  _endGameLoopEvent: {fileID: 11400000, guid: 909619709e1df4902985077a2c4a8466, type: 2}
 --- !u!4 &1994350741
 Transform:
   m_ObjectHideFlags: 0

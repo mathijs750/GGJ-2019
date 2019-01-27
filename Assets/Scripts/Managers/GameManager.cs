@@ -33,7 +33,11 @@ namespace Managers
         public GameState CurrentState { get; private set; } = GameState.StartUp;
         public HouseController CurrentHouseController { get; private set; }
         public static float WaitTime => 5f;
-        public int Score => 0;
+        public int Score
+        {
+            get { return 0; }
+            set { throw new System.NotImplementedException(); }
+        }
 
         public void SpawnNewHouseController()
         {            
