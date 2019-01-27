@@ -22,7 +22,7 @@ namespace Drops
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            Debug.Log($"AUW ik raak {other.gameObject.name}");
+            //Debug.Log($"AUW ik raak {other.gameObject.name}");
             if (_isAttached) EnableDropping(); 
             else if (_onDoneEvent != null) _onDoneEvent.Raise();
         }
