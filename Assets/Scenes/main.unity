@@ -282,7 +282,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10.18
+  orthographic size: 14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -306,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0840814, y: 6.863884, z: -10}
+  m_LocalPosition: {x: 5.1078815, y: 3.052106, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Follow: {fileID: 94825567}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10.18
+    OrthographicSize: 14
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -478,7 +478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848622740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.01, y: 12.2630005, z: -10}
+  m_LocalPosition: {x: -1.01, y: 11.690001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 618805428}
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5214511d0f05b46d49d6d1f7dff81547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DropRate: 30
+  DropRate: 40
   MovementSpeed: 0.1
   _housePlacePrefabs:
   - {fileID: 112485618925447302, guid: f9257c173c7a643a1a85cb30eb0dd5a3, type: 3}
